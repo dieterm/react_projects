@@ -1,0 +1,37 @@
+{
+  "type": "object",
+  "tests": [],
+  "fields": {
+    "firstName": {
+      "type": "string",
+      "tests": [
+        { "name": "max", "params": { "max": 15 } },
+        { "name": "required" }
+      ]
+    },
+    "lastName": {
+      "type": "string",
+      "tests": [
+        { "name": "max", "params": { "max": 20 } },
+        { "name": "required" }
+      ]
+    },
+    "email": {
+      "type": "string",
+      "tests": [
+        { "name": "email", "params": { "regex": {} } },
+        { "name": "required" }
+      ]
+    },
+    "acceptedTerms": {
+      "type": "boolean",
+      "tests": [{ "name": "required" }],
+      "oneOf": [true]
+    },
+    "jobType": {
+      "type": "string",
+      "tests": [{ "name": "required" }],
+      "oneOf": ["designer", "development", "product", "other"]
+    }
+  }
+}
